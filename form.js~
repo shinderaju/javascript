@@ -1,0 +1,15 @@
+var name ;
+var rollNO ;
+var age;
+function setData(){
+	 name = document.getElementById("name").value;
+	 rollNO = document.getElementById("rollNo").value;
+	 age = document.getElementById("age").value;
+	
+}
+function getData(){
+	document.getElementById('getName').innerHTML = name;
+	document.getElementById('getRollNo').innerHTML = rollNo;
+	document.getElementById('getAge').innerHTML = age;
+	
+}

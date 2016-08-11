@@ -1,0 +1,19 @@
+
+<html>
+	<head>
+		<h2>Method of javascript</h2>
+	</head>
+		<body>
+			<script type="text/javascript">
+				var Area = function(){
+										return (this.height * this.width)
+									};
+				var myHouse = new Object();
+				myHouse.height = 40;
+				myHouse.width = 50;
+				myHouse.area = Area;
+				console.log(myHouse.area);
+				document.write("area "+myHouse.area());
+			</script>
+		</body>
+</html>
