@@ -1,0 +1,28 @@
+<!-- page to take input and perform mathematicla
+operation on data -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>calculator</title>
+  <style>
+body {
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+  <p>addition of two numbers</p>
+  first num : <input type ="number" id="fno" width="100"><br/>
+  second num : <input type ="number" id="sno"><br/>
+  select operation : <select id="sel" value="select">
+                        <option value="select">select</option>
+                        <option onclick="add()">add</option>
+                        <option onclick="sub()">substract</option>
+                        <option onclick="mul()">multiply</option>
+                        <option onclick="div()">division</option>
+                     </select>
+    <input type="button" id="bt" onclick="calculate()" value="calculate"><br>
+  result : <input type="number" id="res" ><br/>
+<script src="/home/bridgeit/Desktop/Raju/javaScript/calculator.js"></script>
+</body>
+</html>

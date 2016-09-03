@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <HTML>
+      <HEAD>
+        <TITLE>Test</TITLE>
+        <script type="text/javascript"> 
+
+        function display(){ 
+            document.write("You entered: " + document.getElementById('name').value);
+            document.write("You entered: " + document.getElementById('age').value);
+            document.write("You entered: " + document.getElementById('rollNo').value);
+        } 
+        </script> 
+      </HEAD>
+      <BODY>
+      <center>    
+<form action="action_page.html" method="post">
+  Roll NO:
+  <input  type="text" id="rollNo"><br>
+Name:
+  <input  type="text" id="name"><br>
+Age:
+  <input  type="text" id="age"><br>
+  <input type="submit" value="Submit" onClick="display()">
+
+</form>
+    </BODY>
+    </HTML>

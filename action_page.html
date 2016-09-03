@@ -1,0 +1,45 @@
+<!-- get student details from form -->
+<html>
+    <head>
+        <title> student details </title>
+
+
+        <script LANGUAGE="JavaScript">
+        /**
+        * get the user data from URL
+        * @ param{} null
+        * @ return{Array} params
+        * @
+        */
+            function getParams(){
+                var idx = document.URL.indexOf('?');
+                var params = new Array();
+                if (idx != -1) {
+		    //split url from idx
+                    var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+                    for (var i=0; i<pairs.length; i++){
+			//split pairs in key and value
+                        nameVal = pairs[i].split('=');
+                        params[i] = nameVal[1]; // store value in array
+                    }
+                }
+                return params;
+            }//end of getParams()
+
+            //call to getParams()
+            params = getParams();
+            name = params[0];
+            rollNo = params[1];
+            passAge = params[2];
+
+            //print user data
+            document.write("name = " + name + "<br>");
+            document.write("roll no = " + rollNo + "<br>");
+            document.write("age = " + passAge + "<br>");
+            </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>
