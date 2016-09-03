@@ -1,0 +1,12 @@
+<html>
+<head>
+</head>
+<body>
+<p id='clock'></p>
+<p id='news' ></p>
+<!---give path of js file  -->
+<script src="/home/bridgeit/Desktop/Raju/javaScript/clock.js">
+
+</script>
+</body>
+</html>

@@ -1,88 +1,41 @@
 <html>
 	<head>
-
-
-	</head>
-	<body>
-		<script>
-			/*
-			* Hash Table Implementation
-			* @ param {number} -key,value
-			*/
-
-
+	
 	</head>
 	<body>
 		<script>
 			//Hash Table Implementation
-
 var HashEntry = function(key, value) {
     this.key = key;
     this.value = value;
     this.nextEntry = undefined;
 };
-
-//add methods to Hashentry prototype
-HashEntry.prototype = {
-	// return key
-  getKey : function() {
-    return this.key;
-  },
-	// return value
-  getValue : function() {
-    return this.value;
-  },
-	// set the value for next entry
-  setNext : function(entry) {
-    this.nextEntry = entry;
-  },
-	// return the value of nextEntry
-
 HashEntry.prototype = {
   getKey : function() {
     return this.key;
   },
   getValue : function() {
-    return this.value;
+    return this.value;  
   },
   setNext : function(entry) {
     this.nextEntry = entry;
   },
-
   getNext : function() {
     return this.nextEntry;
   }
 
 };
 
-/*
-* creat hashtabel for HashEntry
-*/
-
-
-
 var HashTable = function(){
   this.tableSize = 100;
   this.table = []; //this will be holding HashEntry(s)
 };
 
-
-//add methods to hashtabel
 HashTable.prototype = {
-	  //return an hash
-
-HashTable.prototype = {
-
   hashFunction: function(input) {
     //return an hash
     return input % this.tableSize;
   },
-
-
-	/* add element to hashtabel
-	* @params {number} -key,value
-	*/
-
   put : function(key, value) {
     var hash = this.hashFunction(key);
     var table = this.table;
@@ -96,13 +49,6 @@ HashTable.prototype = {
        temp.setNext(new HashEntry(key, value));
     }
   },
-
-	/*
-	* return value for key
-	* @params{number} -key
-	* @return{number} -value
-	*/
-
   get : function(key) {
      var hash = this.hashFunction(key);
      var table = this.table;
@@ -115,11 +61,7 @@ HashTable.prototype = {
          temp = temp.getNext();
          if(temp.getKey() === key) {
            return temp.getValue();
-
-         }
-
-         }
-
+         } 
        }
      }
   }
@@ -134,7 +76,7 @@ document.write(hashTable.get(12)+"<br/>");
 document.write(hashTable.get(123)+"<br/>");
 document.write(hashTable.get(112)+"<br/>");
 document.write(hashTable.get(134)+"<br/>");
-
+		
 		</script>
 	</body>
 </html>

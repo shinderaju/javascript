@@ -1,8 +1,3 @@
-
-/*
-* split the url in various parts and print them
-*/
-
 function getUrlParts() {
   var url = location.href;
   document.write("url -- "+url+"<br/>");
